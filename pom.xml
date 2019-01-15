@@ -1,0 +1,17 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>maxrousset.com.github.livreta</groupId>
+  <artifactId>LivretA</artifactId>
+  <version>1.0</version>
+
+  <dependencies>
+    <!--Bukkit API-->
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>1.13.2-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+</project>
