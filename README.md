@@ -1,5 +1,4 @@
-# CoralRegen
-
+# CoralCraft
 
 ## Makes the block of corals craftable
 
