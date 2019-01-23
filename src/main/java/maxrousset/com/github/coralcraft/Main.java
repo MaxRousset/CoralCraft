@@ -1,4 +1,4 @@
-package maxrousset.com.github.coral;
+package maxrousset.com.github.coralcraft;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

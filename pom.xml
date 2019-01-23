@@ -1,8 +1,15 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>maxrousset.com.github.coralregen</groupId>
-  <artifactId>CoralRegen</artifactId>
+  <groupId>maxrousset.com.github.coralcraft</groupId>
+  <artifactId>CoralCraft</artifactId>
   <version>1.0</version>
+
+  <repositories>
+      <repository>
+          <id>spigot-repo</id>
+          <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      </repository>
+  </repositories>
 
   <dependencies>
     <!--Bukkit API-->
