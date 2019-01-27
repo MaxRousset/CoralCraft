@@ -8,70 +8,50 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
 
+  public void smallCraft(Material input, Material output) {
+
+    ShapedRecipe recipe = new ShapedRecipe( new ItemStack( output ) );
+    recipe.shape("EEE","EEE","EEE");
+    recipe.setIngredient( 'E', input );
+    getServer().addRecipe( recipe );
+  }
+
+
+  public void craft(Material input, Material output) {
+
+    ShapedRecipe recipe = new ShapedRecipe( new ItemStack( output ) );
+    recipe.shape("EE","EE");
+    recipe.setIngredient( 'E', input );
+    getServer().addRecipe( recipe );
+  }
+
   @Override
   public void onEnable() {
 
     //RECIPES FOR SMALL CORALS
 
-    ShapedRecipe recipe_blue_coral_block_small = new ShapedRecipe( new ItemStack( Material.TUBE_CORAL_BLOCK ) );
-    recipe_blue_coral_block_small.shape("EEE","EEE","EEE");
-    recipe_blue_coral_block_small.setIngredient( 'E', Material.TUBE_CORAL_FAN );
-    getServer().addRecipe( recipe_blue_coral_block_small );
+    smallCraft(Material.TUBE_CORAL_FAN, Material.TUBE_CORAL_BLOCK);
 
+    smallCraft(Material.BRAIN_CORAL_FAN, Material.BRAIN_CORAL_BLOCK);
 
-    ShapedRecipe recipe_pink_coral_block_small = new ShapedRecipe( new ItemStack( Material.BRAIN_CORAL_BLOCK ) );
-    recipe_pink_coral_block_small.shape("EEE","EEE","EEE");
-    recipe_pink_coral_block_small.setIngredient( 'E', Material.BRAIN_CORAL_FAN );
-    getServer().addRecipe( recipe_pink_coral_block_small );
+    smallCraft(Material.BUBBLE_CORAL_FAN, Material.BUBBLE_CORAL_BLOCK);
 
+    smallCraft(Material.FIRE_CORAL_FAN, Material.FIRE_CORAL_BLOCK);
 
-    ShapedRecipe recipe_purple_coral_block_small = new ShapedRecipe( new ItemStack( Material.BUBBLE_CORAL_BLOCK ) );
-    recipe_purple_coral_block_small.shape("EEE","EEE","EEE");
-    recipe_purple_coral_block_small.setIngredient( 'E', Material.BUBBLE_CORAL_FAN );
-    getServer().addRecipe( recipe_purple_coral_block_small );
-
-
-    ShapedRecipe recipe_red_coral_block_small = new ShapedRecipe( new ItemStack( Material.FIRE_CORAL_BLOCK ) );
-    recipe_red_coral_block_small.shape("EEE","EEE","EEE");
-    recipe_red_coral_block_small.setIngredient( 'E', Material.FIRE_CORAL_FAN );
-    getServer().addRecipe( recipe_red_coral_block_small );
-
-
-    ShapedRecipe recipe_yellow_coral_block_small = new ShapedRecipe( new ItemStack( Material.HORN_CORAL_BLOCK ) );
-    recipe_yellow_coral_block_small.shape("EEE","EEE","EEE");
-    recipe_yellow_coral_block_small.setIngredient( 'E', Material.HORN_CORAL_FAN );
-    getServer().addRecipe( recipe_yellow_coral_block_small );
+    smallCraft(Material.HORN_CORAL_FAN, Material.HORN_CORAL_BLOCK);
 
 
     //RECIPES FOR BIG CORALS
 
-    ShapedRecipe recipe_blue_coral_block = new ShapedRecipe( new ItemStack( Material.TUBE_CORAL_BLOCK ) );
-    recipe_blue_coral_block.shape("EE","EE");
-    recipe_blue_coral_block.setIngredient( 'E', Material.TUBE_CORAL );
-    getServer().addRecipe( recipe_blue_coral_block);
+    craft(Material.TUBE_CORAL,Material.TUBE_CORAL_BLOCK);
 
+    craft(Material.BRAIN_CORAL,Material.BRAIN_CORAL_BLOCK);
 
-    ShapedRecipe recipe_pink_coral_block = new ShapedRecipe( new ItemStack( Material.BRAIN_CORAL_BLOCK ) );
-    recipe_pink_coral_block.shape("EE","EE");
-    recipe_pink_coral_block.setIngredient( 'E', Material.BRAIN_CORAL );
-    getServer().addRecipe( recipe_pink_coral_block );
+    craft(Material.BUBBLE_CORAL,Material.BUBBLE_CORAL_BLOCK);
 
-    ShapedRecipe recipe_purple_coral_block = new ShapedRecipe( new ItemStack( Material.BUBBLE_CORAL_BLOCK ) );
-    recipe_purple_coral_block.shape("EE","EE");
-    recipe_purple_coral_block.setIngredient( 'E', Material.BUBBLE_CORAL );
-    getServer().addRecipe( recipe_purple_coral_block );
+    craft(Material.FIRE_CORAL,Material.FIRE_CORAL_BLOCK);
 
-
-    ShapedRecipe recipe_red_coral_block = new ShapedRecipe( new ItemStack( Material.FIRE_CORAL_BLOCK ) );
-    recipe_red_coral_block.shape("EE","EE");
-    recipe_red_coral_block.setIngredient( 'E', Material.FIRE_CORAL );
-    getServer().addRecipe( recipe_red_coral_block );
-
-
-    ShapedRecipe recipe_yellow_coral_block = new ShapedRecipe( new ItemStack( Material.HORN_CORAL_BLOCK ) );
-    recipe_yellow_coral_block.shape("EE","EE");
-    recipe_yellow_coral_block.setIngredient( 'E', Material.HORN_CORAL );
-    getServer().addRecipe( recipe_yellow_coral_block );
+    craft(Material.HORN_CORAL,Material.HORN_CORAL_BLOCK);
 
   }
 
